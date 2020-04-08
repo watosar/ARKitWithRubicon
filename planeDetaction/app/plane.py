@@ -89,7 +89,7 @@ class Plane(SCNNode):
         material.diffuse.contents = UIColor.grayColor
 
         # Use a SceneKit shader modifier to render only the borders of the plane.
-        shader = ns_from_py((Path(__file__).parent/'Assets_scnassets/wireframe_shader.metal').read_text(encoding='utf-8'))
+        shader = ns_from_py((Path(__file__).parent/'Assets.scnassets/wireframe_shader.metal').read_text(encoding='utf-8'))
         SCNShaderModifierEntryPointSurface = ObjCInstance(runtime.c_void_p.in_dll(runtime.CDLL(None), 'SCNShaderModifierEntryPointSurface'))
         material.shaderModifiers = NSDictionary.dictionaryWithObject_forKey_(shader, SCNShaderModifierEntryPointSurface)
     

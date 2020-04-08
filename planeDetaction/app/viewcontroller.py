@@ -53,7 +53,7 @@ class MyViewController(UIViewController, protocols=[ARSessionDelegate]):
         self.view.initWithFrame_(frame)
         self.sceneView = ARSCNView.alloc().initWithFrame_(frame)
         self.sceneView.delegate = self
-        self.sceneView.scene = SCNScene.sceneWithURL_options_(NSURL.fileURLWithPath_(str(Path(__file__).parent/'Assets_scnassets/CameraSetup.scn')),None)
+        self.sceneView.scene = SCNScene.sceneWithURL_options_(NSURL.fileURLWithPath_(str(Path(__file__).parent/'Assets.scnassets/CameraSetup.scn')),None)
         self.view.addSubview_(self.sceneView)
         
         self.sessionInfoView = UIVisualEffectView.alloc().initWithEffect_(UIBlurEffect.effectWithStyle_(1))
